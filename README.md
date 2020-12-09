@@ -18,14 +18,13 @@ git submodule update --init --recursive
 ```
 
 May need to install Ctags (optional):
-```
-Linux - sudo apt install ctags
-```
-```
-MacOS - brew install ctags
-```
+
+Linux - ```sudo apt install ctags```.
+
+MacOS - ```brew install ctags```.
 
 By default, tag files are generated each time you write to file (.py only).
 
 If plugins will not load check path -  ```:set rtp``` and ```:scriptnames```. 
+
 Run ```:helptags ALL``` to generate tags for help docs.
