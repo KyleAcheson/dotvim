@@ -1,0 +1,9 @@
+[submodule "pack/plugins/start/python-mode"]
+	path = pack/plugins/start/python-mode
+	url = https://github.com/python-mode/python-mode.git
+[submodule "pack/plugins/start/nerdtree"]
+	path = pack/plugins/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "pack/plugins/start/gruvbox"]
+	path = pack/plugins/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
