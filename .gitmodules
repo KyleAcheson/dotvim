@@ -7,3 +7,6 @@
 [submodule "pack/plugins/start/gruvbox"]
 	path = pack/plugins/start/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
+[submodule "pack/plugins/start/vim-cellmode"]
+	path = pack/plugins/start/vim-cellmode
+	url = https://github.com/julienr/vim-cellmode
