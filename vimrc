@@ -51,6 +51,8 @@ function! UpdateTags()
   let resp = system(cmd)
 endfunction
 autocmd BufWritePost *.py call UpdateTags()
+autocmd BufWritePost *.m call UpdateTags()
+autocmd BufWritePost *.jl call UpdateTags()
 
 " Leader mappings
 let mapleader=','
@@ -76,9 +78,9 @@ let g:pymode_lint_cwindow = 0
 let g:pymode_motion = 1
 let g:pymode_lint_on_fly = 1
 let g:pymode_lint_signs = 1
-let g:pymode_rope = 1
-let g:pymode_rope_completion = 1 
-set completeopt=menuone,noinsert
+"let g:pymode_rope = 1
+"let g:pymode_rope_completion = 1 
+"set completeopt=menuone,noinsert
 let g:pymode_breakpoint = 1
 let g:pymode_breakpoint_bind = '<leader>b'
 let g:pymode_run = 1
@@ -89,8 +91,10 @@ autocmd VimEnter *  NERDTree | wincmd p
 autocmd StdinReadPre * let s:std_in=1
 autocmd StdinReadPre * let s:std_in=1
 let g:NERDTreeMinimalUI = 0
+noremap <leader>n :NERDTreeToggle<CR>
 
 " Vim-slime
+let g:slime_target = "vimterminal"
 
 "Vim-ipython
 
