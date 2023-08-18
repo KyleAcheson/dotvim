@@ -1,4 +1,5 @@
 " Color Scheme
+colorscheme nord
 
 " General options
 set encoding=utf-8
