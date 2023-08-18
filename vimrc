@@ -1,15 +1,4 @@
 " Color Scheme
-autocmd vimenter * colorscheme gruvbox
-let g:gruvbox_bold = '1'
-let g:gruvbox_italic = '1'
-set bg=dark
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_termcolors = '256'
-let g:gruvbox_vert_split = 'bg3'
-let g:gruvbox_split = 'red'
-
-"tmux
-set term=screen-256color
 
 " General options
 set encoding=utf-8
@@ -29,30 +18,6 @@ set statusline=[b:%n]\[%{getcwd()}]\ %f%=%m[L\%l,\ C\%v]
 set background=dark
 set scrolloff=10
 set path+=** " allow :find through child dirs
-
-" Ctags - rewrite py tag file on save - edit for more filetypes
-command! MakeTags !ctags -R .
-function! DelTagOfFile(file)
-  let fullpath = a:file
-  let cwd = getcwd()
-  let tagfilename = cwd . "/tags"
-  let f = substitute(fullpath, cwd . "/", "", "")
-  let f = escape(f, './')
-  let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
-  let resp = system(cmd)
-endfunction
-
-function! UpdateTags()
-  let f = expand("%:p")
-  let cwd = getcwd()
-  let tagfilename = cwd . "/tags"
-  let cmd = 'ctags -a -f ' . tagfilename . ' --c++-kinds=+p --fields=+iaS --extra=+q ' . '"' . f . '"'
-  call DelTagOfFile(f)
-  let resp = system(cmd)
-endfunction
-autocmd BufWritePost *.py call UpdateTags()
-autocmd BufWritePost *.m call UpdateTags()
-autocmd BufWritePost *.jl call UpdateTags()
 
 " Leader mappings
 let mapleader=','
@@ -92,10 +57,4 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd StdinReadPre * let s:std_in=1
 let g:NERDTreeMinimalUI = 0
 noremap <leader>n :NERDTreeToggle<CR>
-
-" Vim-slime
-let g:slime_target = "vimterminal"
-
-"Vim-ipython
-
 
