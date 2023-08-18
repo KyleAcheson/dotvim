@@ -1,5 +1,5 @@
 " Color Scheme
-colorscheme nord
+colorscheme gruvbox
 
 " General options
 set encoding=utf-8
