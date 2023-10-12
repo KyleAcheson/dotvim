@@ -7,3 +7,6 @@
 [submodule "pack/plugins/start/awesome-vim-colorschemes"]
 	path = pack/plugins/start/awesome-vim-colorschemes
 	url = https://github.com/rafi/awesome-vim-colorschemes.git
+[submodule "pack/plugins/start/vim-latex"]
+	path = pack/plugins/start/vim-latex
+	url = https://github.com/vim-latex/vim-latex.git

@@ -53,9 +53,9 @@ let g:pymode_run = 1
 let g:pymode_run_bind = '<leader>r'
 
 " NERDTree
-autocmd VimEnter *  NERDTree | wincmd p
-autocmd StdinReadPre * let s:std_in=1
-autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter *  NERDTree | wincmd p
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd StdinReadPre * let s:std_in=1
 let g:NERDTreeMinimalUI = 0
 noremap <leader>n :NERDTreeToggle<CR>
 
