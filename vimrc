@@ -33,6 +33,7 @@ noremap <leader>lpwd :lcd %:p:h
 " Plugins - will need to install
 syntax on
 filetype plugin on
+filetype indent on
 
 " Pymode
 let g:pymode_python = 'python3'
@@ -59,3 +60,5 @@ let g:pymode_run_bind = '<leader>r'
 let g:NERDTreeMinimalUI = 0
 noremap <leader>n :NERDTreeToggle<CR>
 
+
+let g:tex_flavor='latex'
